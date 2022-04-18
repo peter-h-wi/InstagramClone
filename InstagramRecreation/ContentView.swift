@@ -8,48 +8,78 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isLike = false
+    @State private var isBookmark = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack(alignment: .center) {
-                Image("profile")
-                    .resizable()
-                    .scaledToFill()
-                    .clipShape(Circle())
-                    .frame(width: 30, height: 30)
+                ProfileImage(imgName: "profile", width: 30)
                 Text("pita.parking")
+                    .bold()
                 Spacer()
-                Image(systemName: "ellipsis")
+                Button {
+                    // show menu
+                } label: {
+                    Image(systemName: "ellipsis")
+                }
+                .foregroundColor(.primary)
             }
             .padding(.horizontal, 10)
             Image("image")
                 .resizable()
                 .scaledToFit()
             HStack {
-                Image(systemName: "heart")
-                Image(systemName: "message")
-                Image(systemName: "paperplane")
+                Button {
+                    isLike.toggle()
+                } label: {
+                    Image(systemName: isLike ? "heart.fill" : "heart")
+                        .font(.title2)
+                }
+                Button {
+                    // show the comments page.
+                } label: {
+                    Image(systemName: "message")
+                        .font(.title2)
+                }
+                Button {
+                    // deliver it to some other people.
+                } label: {
+                    Image(systemName: "paperplane")
+                        .font(.title2)
+                }
                 Spacer()
-                Image(systemName: "bookmark")
+                Button {
+                    isBookmark.toggle()
+                } label: {
+                    Image(systemName: isBookmark ? "bookmark.fill" : "bookmark")
+                        .font(.title2)
+                }
             }
+            .foregroundColor(.primary)
             .padding(.horizontal, 10)
             HStack {
                 ZStack {
-                    ProfileImage(imgName: "profile2")
+                    ProfileImage(imgName: "profile2", width: 20)
                         .zIndex(3)
-                    ProfileImage(imgName: "profile3")
+                    ProfileImage(imgName: "profile3", width: 20)
                         .offset(x: 13)
                         .zIndex(2)
-                    ProfileImage(imgName: "profile4")
+                    ProfileImage(imgName: "profile4", width: 20)
                         .offset(x: 26)
                         .zIndex(1)
                 }
+                .padding(.trailing, 30)
                 
-                Text("Liked by __sith and 2 others")
-                    .offset(x: 30)
+                Text("Liked by **____sith** and **2 others**")
             }
             .padding(.horizontal, 10)
             Group {
-                Text("pita.parking 🌧 🌺 🍒")
+                HStack {
+                    Text("pita.parking")
+                        .bold()
+                    Text("🌧 🌺 🍒")
+                }
                 Text("3 hours ago")
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -69,12 +99,13 @@ struct ContentView_Previews: PreviewProvider {
 
 struct ProfileImage: View {
     let imgName: String
+    let width: CGFloat
     var body: some View {
         Image(imgName)
             .resizable()
             .scaledToFill()
             .clipShape(Circle())
-            .frame(width: 20, height: 20)
+            .frame(width: width, height: width)
             .overlay(Circle().stroke(.background, lineWidth: 2))
     }
 }
