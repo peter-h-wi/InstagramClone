@@ -35,6 +35,7 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: isLike ? "heart.fill" : "heart")
                         .font(.title2)
+                        .foregroundColor(isLike ? .red : .primary)
                 }
                 Button {
                     // show the comments page.
