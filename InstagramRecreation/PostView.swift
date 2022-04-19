@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PostView: View {
     @State private var isLike = false
     @State private var isBookmark = false
     
@@ -109,7 +109,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        PostView()
     }
 }
 
