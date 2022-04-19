@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE048FCE280E3B8800111CD3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE048FCD280E3B8800111CD3 /* MainView.swift */; };
 		FEC37C17280DED3100610BE1 /* InstagramRecreationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC37C16280DED3100610BE1 /* InstagramRecreationApp.swift */; };
 		FEC37C19280DED3100610BE1 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC37C18280DED3100610BE1 /* PostView.swift */; };
 		FEC37C1B280DED3200610BE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEC37C1A280DED3200610BE1 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE048FCD280E3B8800111CD3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FEC37C13280DED3100610BE1 /* InstagramRecreation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramRecreation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC37C16280DED3100610BE1 /* InstagramRecreationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramRecreationApp.swift; sourceTree = "<group>"; };
 		FEC37C18280DED3100610BE1 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				FEC37C16280DED3100610BE1 /* InstagramRecreationApp.swift */,
+				FE048FCD280E3B8800111CD3 /* MainView.swift */,
 				FEC37C18280DED3100610BE1 /* PostView.swift */,
 				FEC37C1A280DED3200610BE1 /* Assets.xcassets */,
 				FEC37C1C280DED3200610BE1 /* Preview Content */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEC37C19280DED3100610BE1 /* PostView.swift in Sources */,
+				FE048FCE280E3B8800111CD3 /* MainView.swift in Sources */,
 				FEC37C17280DED3100610BE1 /* InstagramRecreationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

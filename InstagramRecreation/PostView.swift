@@ -107,7 +107,7 @@ struct PostView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct PostView_Previews: PreviewProvider {
     static var previews: some View {
         PostView()
     }
